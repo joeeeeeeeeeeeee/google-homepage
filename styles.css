@@ -1,0 +1,157 @@
+ *{
+	margin: 0px;
+	padding: 0px;
+} 
+button{
+  border: 0;
+  padding: 0;
+}
+a {
+	color:black;
+	text-decoration: none;
+}
+
+html,body{
+	height: 100%;
+}
+body{
+	margin:0px;
+	font-family: arial, sans-serif;
+	font-size: small;
+	
+	
+}
+.page-wrapper{
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2.5fr 1fr 272px 1fr 2.5fr;
+	grid-template-rows: 55px 1fr 92px 30px 45px 30px 35px 1fr 40px 40px;
+	grid-template-areas:
+		"n n n n n"
+		". . . . ."
+		". . l . ."
+		". . . . ."
+		". s s s ."
+		". . . . ."
+		". . b . ."
+		". . . . ."
+		"f f f f f"
+		"g g g g g";
+}
+
+.nav {
+    grid-area: n;
+}
+.logo {
+    grid-area: l;
+}
+.search {
+    grid-area: s;
+}
+.search-buttons{
+	grid-area: b;
+}
+.footer {
+    grid-area: f;
+}
+.footer2 {
+    grid-area: g;
+}
+
+
+.nav ul,.footer ul,.footer2 ul {
+	height: 100%;
+	list-style-type: none;
+	margin:0px 20px 0px 20px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.nav ul li{
+	margin:0px 10px 0px 10px;
+}
+.footer ul li,.footer2 li{
+	margin:0px 15px 0px 15px;
+}
+
+.nav ul{
+	 justify-content: flex-end;
+}
+.footer2 ul .right-start{
+	margin-left: auto;
+}
+.nav a:hover{
+	text-decoration: underline;
+}
+
+.nav button{
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 13px;
+  background: #4285f3;
+  padding: 8px 15px 8px 15px;
+  text-decoration: none;
+}
+
+
+
+
+.search{
+	border-radius: 2px 2px 2px 2px;
+	border: 1px solid #dddddd;
+	box-shadow: 0px 1px 2px 1px rgba(238,238,238,1);
+}
+.search-buttons{
+	display:flex;
+	align-items: center;
+}
+
+.search-buttons button{
+	border-radius: 2px;
+	color: #666;
+	font-size: 13px;
+	background: #f0f0f0;
+	padding: 13px 15px 13px 15px;
+	text-decoration: none;
+}
+.search-buttons button:hover{
+	color: #333;
+	border: 2px solid #ccc;
+}
+.search-buttons button:last-child {
+	margin-left: auto;
+}
+
+.footer,.footer2{
+	border-top: 1px solid #ddd;
+	background-color: #f3f3f3;
+}
+.footer a,.footer2 a{
+	color: #777;
+}
+.footer{
+	font-size:15px;
+}
+.footer2 a:hover{
+	text-decoration: underline;
+}
+
+
+
+form{
+	height:100%;
+	display: flex;
+	align-items: center;
+	
+
+}
+form input{
+	border: none;
+	font-size: 17px;
+	height:100%;;
+	padding-left: 5px;
+	flex: auto;
+}
+form input::placeholder{
+	color: #ccc;
+}
